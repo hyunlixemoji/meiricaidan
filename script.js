@@ -18,6 +18,10 @@ function updateMenuDisplay() {
         const categoryContainer = document.createElement('div');
         categoryContainer.classList.add('menu-category');
 
+        // 添加类别背景颜色
+        const classNames = ['category-9', 'category-8', 'category-7', 'category-6', 'category-5', 'category-4', 'category-3', 'category-2', 'category-1'];
+        categoryContainer.classList.add(classNames[index]);
+
         const categoryTitle = document.createElement('h2');
         categoryTitle.innerText = category;
         categoryContainer.appendChild(categoryTitle);
@@ -29,14 +33,13 @@ function updateMenuDisplay() {
 
             const mealItemsContainer = document.createElement('div');
 
-            // 迭代菜单数据，并根据日期和餐别筛选出对应的项目
             Object.keys(menuData).forEach(itemKey => {
                 const itemArray = menuData[itemKey];
                 itemArray.forEach(item => {
                     if (item.meal === meal && item.date === getDateOffset(index - 7)) {
                         const itemElement = document.createElement('div');
                         itemElement.classList.add('menu-item');
-                        itemElement.innerText = itemKey;  // 在分类中显示菜单项名称
+                        itemElement.innerText = itemKey; // 在分类中显示菜单项名称
                         itemElement.onclick = () => removeMenuItem(itemKey, item.date, item.meal);
                         mealItemsContainer.appendChild(itemElement);
                     }
@@ -97,7 +100,7 @@ function removeMenuItem(item, date, meal) {
             }
         }
     }
-    
+
     localStorage.setItem('menuData', JSON.stringify(menuData));
     updateMenuDisplay();
 }
