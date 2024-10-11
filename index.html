@@ -8,15 +8,17 @@
 </head>
 <body>
     <h1>每日菜单</h1>
-    <div>
-        <input type="date" id="menu-date" />
-        <input type="text" id="menu-item" placeholder="输入菜单项" />
-        <select id="meal-type">
-            <option value="早餐">早餐</option>
-            <option value="午餐">午餐</option>
-            <option value="晚餐">晚餐</option>
-        </select>
-        <button id="add-menu">添加菜单</button>
+    <div class="container">
+        <div class="input-group"> <!-- 添加一个容器来包裹行内元素 -->
+            <input type="date" id="menu-date" />
+            <input type="text" id="menu-item" placeholder="输入菜单项" />
+            <select id="meal-type">
+                <option value="早餐">早餐</option>
+                <option value="午餐">午餐</option>
+                <option value="晚餐">晚餐</option>
+            </select>
+            <button id="add-menu">添加菜单</button>
+        </div>
     </div>
 
     <div id="menu-container"></div>
