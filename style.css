@@ -90,3 +90,27 @@ input[type="text"], input[type="date"], select, button {
 .category-9 {
     background-color: #FF0000; /* 红色 */
 }
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .menuItem {
+        flex-direction: column; /* 在小屏幕上垂直排列 */
+        align-items: flex-start; /* 左对齐 */
+    }
+
+    button {
+        margin-top: 5px; /* 按钮在小屏幕上上下排列时增加间距 */
+    }
+
+    input[type="text"], select {
+        width: 100%; /* 输入框和下拉菜单占满全宽 */
+        margin-bottom: 10px; /* 增加间距 */
+    }
+
+    h1 {
+        font-size: 1.5em; /* 调整标题大小 */
+    }
+}
