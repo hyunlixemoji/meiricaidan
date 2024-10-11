@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>每日菜单</title>
+</head>
+<body>
+    <h1>每日菜单</h1>
+    <div>
+        <input type="date" id="menu-date" />
+        <input type="text" id="menu-item" placeholder="输入菜单项" />
+        <select id="meal-type">
+            <option value="早餐">早餐</option>
+            <option value="午餐">午餐</option>
+            <option value="晚餐">晚餐</option>
+        </select>
+        <button id="add-menu">添加菜单</button>
+    </div>
+
+    <div id="menu-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
