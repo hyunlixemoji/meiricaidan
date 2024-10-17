@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('美食.png'); /* 将 'your-image.jpg' 替换为您的实际图片文件名 */
+    background-image: url('美食.png');
     background-size: 10%;
-    background-repeat: repeat; /* 平铺背景 */
+    background-repeat: repeat;
 }
 
 h1 {
@@ -17,9 +17,9 @@ h1 {
 }
 
 .input-group {
-    display: flex; /* 设置为flexbox布局 */
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 纵向居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input[type="text"], input[type="date"], select, button {
@@ -31,7 +31,7 @@ input[type="text"], input[type="date"], select, button {
 
 #menu-container {
     display: flex;
-    flex-direction: column-reverse; /* 从下往上排列分类 */
+    flex-direction: column-reverse;
     align-items: center;
     width: 100%;
 }
@@ -52,65 +52,23 @@ input[type="text"], input[type="date"], select, button {
     padding: 5px;
     border: 1px solid #ccc;
     margin: 5px 0;
+    border-radius: 10px; /* 设置圆角 */
 }
 
-/* 背景颜色渐变定义 */
-.category-1 {
-    background-color: #FFFFE0; /* 黄色 */
-}
-
-.category-2 {
-    background-color: #FFD699; /* 浅橙色 */
-}
-
-.category-3 {
-    background-color: #FFB3B3; /* 浅红色 */
-}
-
-.category-4 {
-    background-color: #FF9999; /* 中红色 */
-}
-
-.category-5 {
-    background-color: #FF7F7F; /* 深红色 */
-}
-
-.category-6 {
-    background-color: #FF6666; /* 更深红色 */
-}
-
-.category-7 {
-    background-color: #FF4C4C; /* 更深红色 */
-}
-
-.category-8 {
-    background-color: #FF3333; /* 非常深红色 */
-}
-
-.category-9 {
-    background-color: #FF0000; /* 红色 */
-}
+.category-1 { background-color: #FFFFE0; }
+.category-2 { background-color: #FFD699; }
+.category-3 { background-color: #FFB3B3; }
+.category-4 { background-color: #FF9999; }
+.category-5 { background-color: #FF7F7F; }
+.category-6 { background-color: #FF6666; }
+.category-7 { background-color: #FF4C4C; }
+.category-8 { background-color: #FF3333; }
+.category-9 { background-color: #FF0000; }
 
 @media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-    
-    .menuItem {
-        flex-direction: column; /* 在小屏幕上垂直排列 */
-        align-items: flex-start; /* 左对齐 */
-    }
-
-    button {
-        margin-top: 5px; /* 按钮在小屏幕上上下排列时增加间距 */
-    }
-
-    input[type="text"], select {
-        width: 100%; /* 输入框和下拉菜单占满全宽 */
-        margin-bottom: 10px; /* 增加间距 */
-    }
-
-    h1 {
-        font-size: 1.5em; /* 调整标题大小 */
-    }
+    body { padding: 10px; }
+    .menu-item { flex-direction: column; align-items: flex-start; }
+    button { margin-top: 5px; }
+    input[type="text"], select { width: 100%; margin-bottom: 10px; }
+    h1 { font-size: 1.5em; }
 }
